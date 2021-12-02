@@ -1,0 +1,17 @@
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+body{
+    background-color:snow;
+}
+
+div.card-header {
+ font-size: large;
+}
+
+div.card {
+  margin-top: 10px
+}
+
+.table {
+  margin-top: 10px
+}
