@@ -2,7 +2,7 @@ import { Product } from './product';
 
 export class ProductData {
 
-  static products: Product[] = [
+  public products: Product[] = [
     {
       id: 1,
       productName: 'Leaf Rake',
