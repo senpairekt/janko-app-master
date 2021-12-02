@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { catchError, EMPTY } from 'rxjs';
+import { catchError, combineLatest, EMPTY } from 'rxjs';
+import { CategoryService } from './category/category.service';
 import { ProductsService } from './products.service';
 
 @Component({
@@ -11,16 +12,12 @@ export class ProductsComponent implements OnInit {
   pageTitle = 'Janko-App'
   errorMessage ='';
 
- 
-   products$ = this.productsService.products$
-   .pipe(
-     catchError( err => {
-       this.errorMessage = err;
-       return EMPTY
-     })
-   )
+ products$ = this.productsService.products$
 
-  constructor(private productsService : ProductsService) { }
+  
+
+  constructor(private productsService : ProductsService,
+                private categoryData : CategoryService) { }
 
   ngOnInit(): void {
   }
